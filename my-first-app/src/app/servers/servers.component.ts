@@ -15,8 +15,13 @@ import { Component, OnInit } from '@angular/core';
   // ]
 })
 export class ServersComponent implements OnInit {
+makemeoffline:boolean=false;
+  constructor() { 
+setTimeout(()=> {
+  this.makemeoffline=true;
+}, 2000);
 
-  constructor() { }
+  }
 
   ngOnInit() {
   }
