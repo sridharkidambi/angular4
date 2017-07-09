@@ -26,4 +26,13 @@ setTimeout(()=> {
   ngOnInit() {
   }
 
+  getmakemeoffline(){
+    if(this.makemeoffline){
+      return " i am  clickable";
+    }else{
+      return " i am not clickable";
+    }
+  }
+
 }
+

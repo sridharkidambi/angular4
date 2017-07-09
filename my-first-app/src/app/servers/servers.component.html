@@ -14,8 +14,11 @@
           <div app-server></div>-->
           <div class="app-server"></div>
           <div class="app-server"></div>
-      <button class="btn btn-primary" name="addnewServer" [disabled]="makemeoffline">addnewServer</button>
+          
+      <button class="btn btn-primary" name="addnewServer" [disabled]="!makemeoffline">addnewServer</button>
     </div>
+    {{getmakemeoffline()}}
+    <p  [innerText]="getmakemeoffline()"></p>
   </div>
    <div class="row">
         <p>
