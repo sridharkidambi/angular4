@@ -1,3 +1,8 @@
-/*.p:{
-color: red;
-};*/
+p{
+/*color: red;*/
+};
+row{
+    /*font-style:border;
+    font-weight: 600;*/
+    color:blue;
+}
