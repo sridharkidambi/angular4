@@ -15,7 +15,8 @@
           <div class="app-server"></div>
           <div class="app-server"></div>
           <!--$event special dom event associated with the html controls like text and button-->
-          <input type="text" class="form-control" (input)=textInput($event) /><br/>
+          <!--<input type="text" class="form-control" (input)=textInput($event) /><br/>-->
+           <input type="text" class="form-control" [(ngModel)]="inpStringText" /><br/>
           {{inpStringText}}
       <button class="btn btn-primary" name="addnewServer" [disabled]="!makemeoffline" (click)="btnClicked()">addnewServer</button>
     

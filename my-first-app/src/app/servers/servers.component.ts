@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { ngModel } from '@angular/forms'
 @Component({
   // selector: 'app-servers',
   selector: '[app-servers]',
@@ -16,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 makemeoffline:boolean=false;
-inpStringText:string="";
+inpStringText:string="initialText";
 btnclickmsg:string="i am not clicking";
   constructor() { 
 setTimeout(()=> {
