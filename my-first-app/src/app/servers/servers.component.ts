@@ -16,6 +16,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 makemeoffline:boolean=false;
+inpStringText:string="";
+btnclickmsg:string="i am not clicking";
   constructor() { 
 setTimeout(()=> {
   this.makemeoffline=true;
@@ -33,6 +35,15 @@ setTimeout(()=> {
       return " i am not clickable";
     }
   }
+  btnClicked()
+  {
+    this.btnclickmsg="i was clicked";
+    return this.btnclickmsg;
+  }
 
+textInput(event:Event){
+  console.log(event);
+this.inpStringText= (<HTMLInputElement>event.target).value
+}
 }
 

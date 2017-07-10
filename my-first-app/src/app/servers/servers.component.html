@@ -14,8 +14,12 @@
           <div app-server></div>-->
           <div class="app-server"></div>
           <div class="app-server"></div>
-          
-      <button class="btn btn-primary" name="addnewServer" [disabled]="!makemeoffline">addnewServer</button>
+          <!--$event special dom event associated with the html controls like text and button-->
+          <input type="text" class="form-control" (input)=textInput($event) /><br/>
+          {{inpStringText}}
+      <button class="btn btn-primary" name="addnewServer" [disabled]="!makemeoffline" (click)="btnClicked()">addnewServer</button>
+    
+    {{btnclickmsg}}
     </div>
     {{getmakemeoffline()}}
     <p  [innerText]="getmakemeoffline()"></p>
