@@ -22,10 +22,15 @@
     
     {{btnclickmsg}}
     </div>
-    {{getmakemeoffline()}}
+   <p *ngIf="makemeoffline else makemeonline"  >{{getmakemeoffline()}}{{makemeoffline}}</p>
     <p  [innerText]="getmakemeoffline()"></p>
+    <ng-template #makemeonline>
+      <p [ngStyle]="{ backgroundColor: getColor()}"> 
+        #makemeonline will show incase of ngif else condition evaluation
+      </p>
+    </ng-template>
   </div>
-   <div class="row">
+   <div class="row"  [ngClass]="{mycustomp: makemeoffline}">
         <p>
           kfkjdfk !!!!
         </p>
