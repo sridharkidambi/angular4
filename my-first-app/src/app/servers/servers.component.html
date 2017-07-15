@@ -3,22 +3,23 @@
     <div class="col-xs-12" style="background-color:green" >
       <!--<div app-server></div>
       <div app-server></div>-->
-      <div class="app-server"></div>
-      <div class="app-server"></div>
+      <!--<div class="app-server"></div>
+      <div class="app-server"></div>-->
       <p>
           servers works!
           
-          <!--<app-server></app-server>
-          <app-server></app-server>-->
+          <app-server></app-server>
+          <app-server></app-server>
           <!--<div app-server></div>
           <div app-server></div>-->
-          <div class="app-server"></div>
-          <div class="app-server"></div>
+          <!--<div class="app-server"></div>
+          <div class="app-server"></div>-->
           <!--$event special dom event associated with the html controls like text and button-->
           <!--<input type="text" class="form-control" (input)=textInput($event) /><br/>-->
            <input type="text" class="form-control" [(ngModel)]="inpStringText" /><br/>
           {{inpStringText}}
       <button class="btn btn-primary" name="addnewServer" [disabled]="!makemeoffline" (click)="btnClicked()">addnewServer</button>
+    <button class="btn btn-primary" name="addnewServer"  (click)="btnClicked()">addnewServer</button>
     
     {{btnclickmsg}}
     </div>
@@ -35,4 +36,10 @@
           kfkjdfk !!!!
         </p>
     </div>
+    <app-server *ngFor="let item of servers"></app-server>
+   <div class = "newrow" > 
+     Array starts from now
+   </div>
+       
+    <div *ngFor="let item of servers;let idex=index">{{idex+1}}-{{item}}</div>
 </div>

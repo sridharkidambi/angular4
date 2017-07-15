@@ -8,17 +8,18 @@ import { Component, OnInit } from '@angular/core';
   // <app-server></app-server><app-server></app-server>
   // <h1>I am from template</h1>
   // `,
-  // styleUrls: ['./servers.component.css']
-  styles:[`
-  .mycustomp 
-  { color:green;
-  }
-  `]
+  styleUrls: ['./servers.component.css']
+  // styles:[`
+  // .mycustomp 
+  // { color:green;
+  // }
+  // `]
 })
 export class ServersComponent implements OnInit {
 makemeoffline:boolean=false;
 inpStringText:string="initialText";
 btnclickmsg:string="i am not clicking";
+servers:string[]=["server1","server2"];
   constructor() { 
 setTimeout(()=> {
   this.makemeoffline=true;
@@ -40,6 +41,7 @@ setTimeout(()=> {
   {
     this.setbooleanstatus();
     this.btnclickmsg="i was clicked";
+    this.servers.push((new Date()).getDate().toString());
     return this.btnclickmsg;
     
     // this.getColor();

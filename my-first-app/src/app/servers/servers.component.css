@@ -1,8 +1,7 @@
 p{
-/*color: red;*/
+color: yellowgreen;
 };
-row{
-    /*font-style:border;
-    font-weight: 600;*/
-    color:blue;
-}
+.newrow {
+    background-color: royalblue;
+    height: 20px;
+};
